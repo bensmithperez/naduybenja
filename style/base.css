@@ -1,0 +1,430 @@
+/*Autor: Benjamin Smith
+Archivo: base.css*/
+
+/*para toda la página*/
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background: rgba(0,168,255,0.52);
+  /*background: linear-gradient(180deg, rgba(0,168,255,0.52) 0%, rgba(3,8,130,1) 100%);*/
+  overflow-x: hidden;
+}
+
+.numeroDeCuenta{
+  font-weight: bold;
+}
+
+/*nubes*/
+.nubes{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.nube{
+  opacity: 0.5;
+  width: 25%;
+  left: -30%;
+}
+
+#nube1{
+  position: fixed;
+  top: 30%;
+  animation: moverNube1 linear 20s infinite;
+}
+
+#nube2{
+  position: fixed;
+  top: 50%;
+  animation: moverNube2 linear 20s infinite;
+  animation-delay: 2s;
+}
+
+#nube3{
+  position: fixed;
+  top: 60%;
+  animation: moverNube3 linear 20s infinite;
+  animation-delay: 6s;
+}
+
+#nube4{
+  position: fixed;
+  top: 70%;
+  animation: moverNube4 linear 20s infinite;
+  animation-delay: 12s;
+}
+
+#nube5{
+  position: fixed;
+  top: 20%;
+  animation: moverNube5 linear 20s infinite;
+  animation-delay: 10s;
+}
+
+/*pantalla principal*/
+section#inicio{
+  height: 100vh; 
+}
+
+.paltosConGlobo img{
+  padding-top: 5%;
+  padding-left: 5%; 
+  height: 82vh;
+  /*width: 25vw;*/
+  z-index: 2;
+  animation: moverPaltos 4s infinite;
+}
+
+#inicio h1{
+  font-size: 11rem;
+  position: absolute;
+  right: 7vw;
+  top: 27vh;
+  font-family: 'Sacramento', cursive;
+  z-index: 2;
+}
+
+#inicio h2{
+  font-size: 5rem;
+  position: absolute;
+  right: 14vw;
+  top: 58vh;
+  font-family: 'Amatic SC', cursive;
+  z-index: 2;
+}
+
+/*seccion del medio*/
+section#medio{
+  height: 100vh;
+}
+
+#medio h1{
+  font-size: 10rem;
+  position: absolute;
+  left: 7vw;
+  top: 130vh;
+  font-family: 'Amatic SC', cursive;
+  z-index: 2;
+  color: black;
+}
+
+#medio h2{
+  font-size: 5rem;
+  position: absolute;
+  left: 7vw;
+  top: 116vh;
+  font-family: 'Amatic SC', cursive;
+  z-index: 2;
+  color: black;
+}
+
+.paltosEnAvion img{
+  padding-top: 15%;
+  padding-left: 67%;
+  /*height: 32vh;*/
+  width: 26vw;
+  z-index: 2;
+  animation: moverPaltos 2s infinite;
+}
+
+#medio p{
+  font-size: 3rem;
+  width: 54%;
+  position: absolute;
+  left: 7vw;
+  top: 160vh;
+  font-family: 'Amatic SC', cursive;
+  z-index: 2;
+  color: black;
+}
+
+/*pantalla final*/
+section#fin{
+  position: relative;
+  height: 100vh;
+}
+
+.fondoNoche{
+  position: relative;
+  background: rgb(0,45,96);
+  background: linear-gradient(180deg, rgba(0,45,96,1) 0%, rgba(0,0,0,1) 100%);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.piso{
+  position: absolute;
+  bottom: 0;
+  background-color: #3f1c0b;
+  width: 100vw;
+  height: 20vh;
+  z-index: 1;
+}
+
+.pantalla{
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  margin: 0px auto;
+  width: 60vw;
+  height: 60vh;
+  background-color: black;
+  z-index: 2;
+}
+
+img.paltosDeEspalda{
+  height: 14vw;
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  z-index: 2;
+}
+
+.imagenPantalla{
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 60vw;
+  height: 60vh;
+  display: none;
+  text-align:center;
+
+}
+
+.imagenPantalla img{
+  height: 120%;
+  /*vertical-align: middle;*/
+  /*transform: translateX(14%);*/
+}
+
+.botonAnterior, .botonSiguiente {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.botonSiguiente {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.botonAnterior:hover, .botonSiguiente:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/*para celus*/
+@media only screen and (max-width: 600px){
+  #nube1{
+    animation-duration: 10s;
+  }
+
+  #nube2{
+    animation-duration: 10s;
+    animation-delay:1s;
+  }
+
+  #nube3{
+    animation-duration: 10s;
+    animation-delay:3s;
+  }
+
+  #nube4{
+    animation-duration: 10s;
+    animation-delay:6s;
+  }
+
+  #nube5{
+    animation-duration: 10s;
+    animation-delay:5s;
+  }
+
+  .paltosConGlobo img{
+    padding-top: 9%;
+    padding-left: 5%; 
+    height: 70vh;
+    width: 90vw;
+    z-index: 2;
+    animation: moverPaltos 4s infinite;
+  }
+
+  #inicio h1{
+    font-size: 4rem;
+    top: 73vh;
+    left: unset;
+    right: unset;
+    text-align: center;
+    width: 100vw;
+    z-index: 2;
+  }
+
+  #inicio h2{
+    font-size: 3rem;
+    top: 82vh;
+    left: unset;
+    right: unset;
+    text-align: center;
+    width: 100vw;
+    z-index: 2;
+  }
+
+  #medio h1{
+    font-size: 8rem;
+    left: 7vw;
+    top: 109vh;
+  }
+
+  #medio h2{
+    font-size: 3.5rem;
+    left: 7vw;
+    top: 103vh;
+  }
+
+  .paltosEnAvion img{
+    padding-top: 90%;
+    padding-left: 6%;
+    /*height: 32vh;*/
+    width: 90vw;
+    z-index: 2;
+    animation: moverPaltos 2s infinite;
+  }
+
+  #medio p{
+    font-size: 2.5rem;
+    position: absolute;
+    width: 90%;
+    left: 7vw;
+    top: 168vh;
+    font-family: 'Amatic SC', cursive;
+    z-index: 2;
+    color: black;
+  }
+
+
+  img.paltosDeEspalda{
+    height: 44vw;
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+  }
+
+  .pantalla{
+    left: 5%;
+    width: 90vw;
+  }
+
+  .imagenPantalla{
+    width: 90vw;
+  }
+
+  .imagenPantalla img{
+    height: 100%;
+  }
+
+  .imagenVertical img{
+
+  }
+
+  .imagenHorizontal img{
+    margin-left: -60px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  #medio h2 {
+      font-size: 3.1rem;
+  }
+  #medio h1{
+    font-size: 7.3rem;
+    text-align: center;
+    left: -1vw;
+    top: 109vh; 
+  }
+
+  .paltosEnAvion img {
+    padding-top: 75%;
+  }
+
+  #medio p {
+    font-size: 2rem;
+    top: 174vh;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  #inicio h1{
+    font-size: 3rem;
+  }
+
+  #inicio h2 {
+    font-size: 2rem;
+  }
+
+  #medio h1{
+    font-size: 6rem;
+  }
+
+  #medio h2{
+    font-size: 2rem;
+  }
+
+  .paltosEnAvion img {
+    padding-top: 75%;
+  }
+
+  #medio p{
+    font-size: 1.6rem;
+    top: 174vh;
+  }
+
+}
+
+/*para ipads...............*/
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  .paltosConGlobo img {
+    padding-top: 8%;
+    padding-left: 5%;
+    height: 81vh;
+  }
+
+  #inicio h1 {
+    font-size: 7rem;
+    right: 2vw;
+    top: 36vh;
+  } 
+
+  #inicio h2 {
+    font-size: 4rem;
+    right: 7vw;
+    top: 50vh;
+  }
+
+  .paltosEnAvion img {
+    padding-top: 66%;
+    padding-left: 39%;
+    /* height: 32vh; */
+    width: 59vw;
+  }
+
+  #medio p {
+    font-size: 3rem;
+    width: 90%;
+    top: 172vh;
+  }
+
+  img.paltosDeEspalda {
+      height: 29vw;
+      left: 24%;
+  }
+}

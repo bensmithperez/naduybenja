@@ -1,0 +1,33 @@
+/*Autor: Benjamin Smith
+Archivo: animaciones.css*/
+
+@keyframes moverNube1 {
+  from {left: -30%;}
+  to {left: 100%;}
+}
+
+@keyframes moverNube2 {
+  from {left: -30%;}
+  to {left: 100%;}
+}
+
+@keyframes moverNube3 {
+  from {left: -30%;}
+  to {left: 100%;}
+}
+
+@keyframes moverNube4 {
+  from {left: -30%;}
+  to {left: 100%;}
+}
+
+@keyframes moverNube5 {
+  from {left: -30%;}
+  to {left: 100%;}
+}
+
+@keyframes moverPaltos {
+  0% {transform: translateY(0%);}
+  50% {transform: translateY(-6%);}
+  100% {transform: translateY(0%);}
+}
